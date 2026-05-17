@@ -1,0 +1,137 @@
+---
+---
+<section class="pricing-section" id="pricing">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="section-eyebrow">Precios</span>
+      <h2 class="section-title">Precio por <span class="italic">campus</span>, no por usuario.</h2>
+      <p class="section-sub">Úsalo en todo tu equipo de admisiones. Facturación anual. Cancela cuando quieras.</p>
+    </div>
+
+    <div class="pricing-grid">
+
+      <!-- Seed -->
+      <div class="price-card reveal d1">
+        <div class="tier">Seed</div>
+        <h3>Para un campus</h3>
+        <div class="amt"><span class="pre">$</span><span class="v">7,900</span><span class="per"> MXN/mes</span></div>
+        <p class="blurb">Todo lo que necesitas para reemplazar tus formularios y empezar a cerrar más rápido.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>AI widget · 1 sitio</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>CRM · hasta 5 usuarios</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Hasta 1,000 leads/mes</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Soporte por correo</li>
+        </ul>
+        <a href="#cta" class="pc-btn">Agenda una demo</a>
+      </div>
+
+      <!-- Grow (featured) -->
+      <div class="price-card featured reveal d2">
+        <div class="most-popular">Más popular</div>
+        <div class="tier">Grow</div>
+        <h3>Para escuelas en crecimiento</h3>
+        <div class="amt"><span class="pre">$</span><span class="v">17,900</span><span class="per"> MXN/mes</span></div>
+        <p class="blurb">El stack completo para escuelas que inscriben 200+ alumnos al año.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Todo lo de Seed</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Usuarios y leads ilimitados</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>WhatsApp + web, línea de tiempo unificada</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Soporte prioritario · SLA 4h</li>
+        </ul>
+        <a href="#cta" class="pc-btn">Agenda una demo</a>
+      </div>
+
+      <!-- Network -->
+      <div class="price-card reveal d3">
+        <div class="tier">Network</div>
+        <h3>Para redes escolares</h3>
+        <div class="amt custom"><span class="v">A medida</span></div>
+        <p class="blurb">Despliegues multi-campus con reportes centralizados y SSO.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Todo lo de Grow</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Dashboards multi-campus</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>SSO, audit logs, DPA</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Customer success manager dedicado</li>
+        </ul>
+        <a href="#cta" class="pc-btn">Hablemos</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .pricing-grid {
+    display: grid; grid-template-columns: repeat(3,1fr); gap: 20px;
+    margin-top: 56px; align-items: start;
+  }
+  @media (max-width: 900px) { .pricing-grid { grid-template-columns: 1fr; max-width: 480px; } }
+
+  .price-card {
+    background: var(--color-paper); border: 1px solid var(--color-ink-line);
+    border-radius: 20px; padding: 28px;
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .price-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+  .price-card.featured {
+    background: var(--color-ink); color: var(--color-paper);
+    border-color: transparent;
+    box-shadow: 0 24px 48px rgba(14,13,10,0.22);
+  }
+
+  .most-popular {
+    position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+    font-family: var(--font-mono); font-size: 10px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.12em;
+    background: var(--color-lime); color: var(--color-ink);
+    padding: 4px 14px; border-radius: 999px; white-space: nowrap;
+  }
+
+  .tier {
+    font-family: var(--font-mono); font-size: 10px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.14em;
+    color: var(--color-ink-mute); margin-bottom: 8px;
+  }
+  .price-card.featured .tier { color: rgba(242,239,230,0.5); }
+
+  .price-card h3 {
+    font-size: 16px; font-weight: 500; letter-spacing: -0.01em;
+    margin-bottom: 16px; line-height: 1.3;
+  }
+
+  .amt { display: flex; align-items: baseline; gap: 2px; margin-bottom: 14px; }
+  .amt .pre { font-size: 20px; font-weight: 600; }
+  .amt .v   { font-size: 38px; font-weight: 700; letter-spacing: -0.04em; line-height: 1; }
+  .amt .per { font-size: 13px; color: var(--color-ink-mute); margin-left: 4px; }
+  .price-card.featured .amt .per { color: rgba(242,239,230,0.5); }
+  .amt.custom .v { font-size: 32px; }
+
+  .blurb { font-size: 13px; color: var(--color-ink-mute); line-height: 1.6; margin-bottom: 20px; }
+  .price-card.featured .blurb { color: rgba(242,239,230,0.6); }
+
+  .price-card ul { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+  .price-card ul li {
+    display: flex; align-items: flex-start; gap: 8px;
+    font-size: 14px; line-height: 1.4;
+  }
+  .price-card ul li svg { width: 14px; height: 14px; flex-shrink: 0; margin-top: 2px; color: var(--color-lime-dk); }
+  .price-card.featured ul li svg { color: var(--color-lime); }
+
+  .pc-btn {
+    display: block; text-align: center;
+    padding: 13px 20px; border-radius: 999px;
+    font-size: 14px; font-weight: 600;
+    background: rgba(14,13,10,0.07); color: var(--color-ink);
+    border: 1px solid var(--color-ink-line);
+    transition: background 0.15s, transform 0.15s, box-shadow 0.15s;
+  }
+  .pc-btn:hover { background: rgba(14,13,10,0.12); transform: translateY(-1px); }
+  .price-card.featured .pc-btn {
+    background: var(--color-lime); color: var(--color-ink); border-color: transparent;
+  }
+  .price-card.featured .pc-btn:hover {
+    background: #E1F88A;
+    box-shadow: 0 10px 24px rgba(215,242,107,0.4);
+  }
+</style>

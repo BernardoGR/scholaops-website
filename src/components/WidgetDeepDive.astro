@@ -1,0 +1,161 @@
+---
+---
+<section class="dark-section" id="widget">
+  <div class="wrap">
+    <div class="showcase-grid reverse">
+      <div class="showcase-text reveal">
+        <span class="section-eyebrow on-dark">/ El widget</span>
+        <h2>
+          Atención entrante en piloto automático.<br/>
+          <span class="italic">Resultados en el dashboard.</span>
+        </h2>
+        <p>
+          Inserta una línea de código en el sitio de tu escuela. Ada empieza a responder — en el idioma de la familia, con la voz de tu institución, sobre los programas y fechas reales de tu campus.
+        </p>
+        <ul class="showcase-list">
+          <li><span class="check">✓</span>Califica prospectos 24/7 con los programas y fechas reales de tu escuela</li>
+          <li><span class="check">✓</span>Conecta el chat web con WhatsApp — sin perder contexto</li>
+          <li><span class="check">✓</span>Pasa el lead a una persona en cuanto la intención cruza el umbral</li>
+          <li><span class="check">✓</span>Conoce tu tabla de colegiaturas, calendario y FAQ — desde una sola fuente de verdad</li>
+        </ul>
+      </div>
+
+      <div class="widget-showcase reveal d1" aria-hidden="true">
+        <div class="widget-callout tag-extract">
+          <div class="ce-lbl">Extraído del chat automáticamente</div>
+          <div class="ce-chips">
+            <span>1.º secundaria</span>
+            <span>Ago 2026</span>
+            <span class="cold">Preguntó colegiatura</span>
+            <span class="warm-chip">Pidió visita</span>
+            <span class="warm-chip">2 hermanos</span>
+          </div>
+        </div>
+
+        <div class="widget-frame">
+          <div class="wf-head">
+            <div class="wf-av"></div>
+            <div>
+              <h6>Ada — Agente de Admisiones</h6>
+              <p>Instituto Ejemplo · en/es</p>
+            </div>
+          </div>
+          <div class="wf-body" id="widgetChat"></div>
+          <div class="wf-input">
+            <div class="fi">Responde a Ada…</div>
+            <div class="send">↑</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .widget-showcase {
+    position: relative; display: flex; flex-direction: column;
+    gap: 16px; align-items: flex-end;
+  }
+  .widget-callout {
+    background: var(--color-paper); border: 1px solid rgba(215,242,107,0.3);
+    border-radius: 14px; padding: 14px 16px;
+    width: 100%; max-width: 380px;
+    animation: bob 5s ease-in-out infinite alternate;
+  }
+  .widget-callout.tag-extract { animation-delay: -1.5s; }
+  .ce-lbl { font-family: var(--font-mono); font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-ink-mute); margin-bottom: 10px; }
+  .ce-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .ce-chips span {
+    font-family: var(--font-mono); font-size: 10px; font-weight: 500;
+    padding: 4px 10px; border-radius: 999px;
+    background: rgba(14,13,10,0.06); border: 1px solid var(--color-ink-line);
+    color: var(--color-ink);
+  }
+  .ce-chips span.cold   { background: rgba(243,112,86,0.1); border-color: rgba(243,112,86,0.3); color: #b04a30; }
+  .ce-chips span.warm-chip { background: rgba(215,242,107,0.2); border-color: rgba(183,214,64,0.4); color: var(--color-moss); }
+
+  .widget-frame {
+    background: linear-gradient(180deg,#F3EFE3,#EAE4D2);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 20px; overflow: hidden;
+    width: 100%; max-width: 380px;
+    box-shadow: 0 24px 48px rgba(14,13,10,0.25);
+  }
+  .wf-head {
+    padding: 14px 16px; display: flex; align-items: center; gap: 10px;
+    border-bottom: 1px solid rgba(14,13,10,0.06);
+    background: rgba(255,255,255,0.4);
+  }
+  .wf-av {
+    width: 34px; height: 34px; border-radius: 50%; background: var(--color-ink);
+    position: relative; flex-shrink: 0;
+  }
+  .wf-av::before { content: ''; position: absolute; inset: 7px; background: var(--color-lime); border-radius: 3px; transform: rotate(45deg) scale(0.85); }
+  .wf-av::after  { content: ''; position: absolute; left: 50%; top: 50%; width: 6px; height: 6px; border-radius: 50%; background: var(--color-ink); transform: translate(-50%,-50%); }
+  .wf-head h6 { font-size: 13px; font-weight: 600; color: var(--color-ink); }
+  .wf-head p  { font-size: 10px; color: var(--color-ink-mute); font-family: var(--font-mono); }
+  .wf-body {
+    min-height: 160px; padding: 14px; display: flex; flex-direction: column; gap: 8px; overflow: hidden;
+  }
+  .wf-input {
+    padding: 10px 12px 14px;
+    border-top: 1px solid rgba(14,13,10,0.06);
+    display: flex; align-items: center; gap: 8px;
+    background: rgba(255,255,255,0.3);
+  }
+  .fi {
+    flex: 1; background: rgba(255,255,255,0.7);
+    border: 1px solid rgba(14,13,10,0.08); border-radius: 999px;
+    padding: 8px 14px; font-size: 11px; color: var(--color-ink-mute);
+  }
+  .send {
+    width: 30px; height: 30px; background: var(--color-ink); border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    color: var(--color-paper); font-size: 13px; flex-shrink: 0;
+  }
+</style>
+
+<script>
+  const widgetChat = document.getElementById('widgetChat');
+  const widgetScript = [
+    { kind: 'in',     text: '¡Hola! ¿En qué grado va tu hija?' },
+    { kind: 'out',    text: 'Mejor en español. Entra a 1.º de secundaria.' },
+    { kind: 'ai',     text: '¡Claro! 1.º aún tiene 4 lugares para Ago 2026 ✨' },
+    { kind: 'out',    text: '¿Hay descuento por hermanos? Tiene 2 hermanitos.' },
+    { kind: 'typing' },
+    { kind: 'ai',     text: 'Sí — 10% en el 2.º hijo, 15% en el 3.º. ¿Te armo una cotización para los tres?' },
+    { kind: 'out',    text: 'Sí, por favor.' },
+    { kind: 'ai',     text: 'Te la mando ahora. Y aparté lugar en el open house del 14 ago 📍' },
+  ];
+
+  function wait(ms: number) { return new Promise(r => setTimeout(r, ms)); }
+
+  async function runWidgetChat() {
+    if (!widgetChat) return;
+    widgetChat.innerHTML = '';
+    for (const m of widgetScript) {
+      if (m.kind === 'typing') {
+        const t = document.createElement('div');
+        t.className = 'typing';
+        t.innerHTML = '<i></i><i></i><i></i>';
+        widgetChat.appendChild(t);
+        await wait(1100);
+        t.remove();
+        continue;
+      }
+      const b = document.createElement('div');
+      b.className = 'bubble ' + m.kind;
+      if (m.kind === 'ai') {
+        b.innerHTML = '<div class="tag"><span class="pulse-s"></span>Ada · AI</div>' + (m.text ?? '');
+      } else {
+        b.textContent = m.text ?? '';
+      }
+      widgetChat.appendChild(b);
+      while (widgetChat.children.length > 4) widgetChat.firstChild?.remove();
+      await wait(m.kind === 'in' ? 1600 : 2000);
+    }
+    await wait(1400);
+    runWidgetChat();
+  }
+  runWidgetChat();
+</script>

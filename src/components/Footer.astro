@@ -1,0 +1,92 @@
+---
+---
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <span class="logo-mark"></span>
+          <b>scholaops</b><span class="dot">.ai</span>
+        </a>
+        <p>El OS de admisiones para escuelas modernas. Agente AI + CRM, trabajando como uno solo.</p>
+      </div>
+      <div class="footer-col">
+        <h6>Producto</h6>
+        <ul>
+          <li><a href="#widget">AI Widget</a></li>
+          <li><a href="#crm">CRM</a></li>
+          <li><a href="#pricing">Precios</a></li>
+          <li><a href="#">Changelog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h6>Empresa</h6>
+        <ul>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="#">Clientes</a></li>
+          <li><a href="#">Trabaja con nosotros</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h6>Recursos</h6>
+        <ul>
+          <li><a href="#">Docs</a></li>
+          <li><a href="#">Seguridad</a></li>
+          <li><a href="#">Privacidad</a></li>
+          <li><a href="#">Términos</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <div>© 2026 scholaops, Inc. — construido para equipos de admisiones escolares.</div>
+      <div class="status-badge"><span class="status-dot"></span>Todos los sistemas operando</div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    background: var(--color-ink-2); color: var(--color-cream);
+    padding: 64px 0 32px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .footer-grid {
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px;
+    margin-bottom: 48px;
+  }
+  @media (max-width: 800px) {
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .footer-brand { grid-column: 1/-1; }
+  }
+  @media (max-width: 480px) { .footer-grid { grid-template-columns: 1fr; } }
+
+  .footer-brand .logo { margin-bottom: 14px; display: inline-flex; }
+  .footer-brand .logo-mark { background: rgba(255,255,255,0.1); }
+  .footer-brand .logo b, .footer-brand .logo .dot { color: rgba(242,239,230,0.8); }
+  .footer-brand p { font-size: 13px; color: rgba(242,239,230,0.45); line-height: 1.6; max-width: 260px; }
+
+  .footer-col h6 {
+    font-family: var(--font-mono); font-size: 10px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.14em;
+    color: rgba(242,239,230,0.35); margin-bottom: 14px;
+  }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col ul li a {
+    font-size: 14px; color: rgba(242,239,230,0.6);
+    transition: color 0.15s;
+  }
+  .footer-col ul li a:hover { color: var(--color-cream); }
+
+  .footer-bot {
+    padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.06);
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 12px;
+    font-family: var(--font-mono); font-size: 11px; color: rgba(242,239,230,0.3);
+  }
+  .status-badge { display: flex; align-items: center; gap: 6px; }
+  .status-dot {
+    width: 6px; height: 6px; border-radius: 50%; background: var(--color-lime-dk);
+    animation: live-pulse 2s infinite;
+  }
+</style>

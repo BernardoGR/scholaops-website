@@ -1,9 +1,63 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+import Pilot from '../components/Pilot.astro';
+import Products from '../components/Products.astro';
+import WidgetDeepDive from '../components/WidgetDeepDive.astro';
+import CrmDeepDive from '../components/CrmDeepDive.astro';
+import Handoff from '../components/Handoff.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import Pricing from '../components/Pricing.astro';
+import Cta from '../components/Cta.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout>
-  <main>
-    <p style="font-family: var(--font-sans); padding: 2rem;">scholaops.ai — próximamente</p>
-  </main>
+  <Nav />
+  <Hero />
+  <Pilot />
+  <Products />
+  <WidgetDeepDive />
+  <CrmDeepDive />
+  <Handoff />
+  <HowItWorks />
+  <Pricing />
+  <Cta />
+  <Footer />
 </Layout>
+
+<script>
+  // Reveal on scroll — global, targets .reveal elements across all components
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Count-up for CRM stats
+  const countIO = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const el = e.target as HTMLElement;
+      const target = parseFloat(el.dataset.count ?? '0');
+      const isFloat = target % 1 !== 0;
+      const duration = 1400;
+      const start = performance.now();
+      function tick(now: number) {
+        const t = Math.min(1, (now - start) / duration);
+        const eased = 1 - Math.pow(1 - t, 3);
+        const v = target * eased;
+        el.textContent = isFloat ? v.toFixed(1) : Math.round(v).toLocaleString('es-MX');
+        if (t < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+      countIO.unobserve(el);
+    });
+  }, { threshold: 0.4 });
+  document.querySelectorAll('[data-count]').forEach(el => countIO.observe(el));
+</script>

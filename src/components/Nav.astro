@@ -1,0 +1,67 @@
+---
+---
+<div class="nav-spacer"></div>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <span class="logo-mark"></span>
+      <b>scholaops</b><span class="dot">.ai</span>
+    </a>
+    <div class="nav-links">
+      <a href="#widget">Widget</a>
+      <a href="#crm">CRM</a>
+      <a href="#how">Cómo funciona</a>
+      <a href="#pricing">Precios</a>
+    </div>
+    <a href="#cta" class="nav-cta">
+      Agenda demo
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+</nav>
+
+<style>
+  .nav-spacer { height: 88px; }
+  .nav {
+    position: fixed; top: 16px; left: 0; right: 0;
+    z-index: 100;
+    display: flex; justify-content: center;
+    pointer-events: none;
+  }
+  .nav-inner {
+    display: flex; align-items: center; gap: 28px;
+    padding: 8px 8px 8px 22px;
+    background: rgba(250,248,242,0.82);
+    backdrop-filter: blur(18px) saturate(1.1);
+    -webkit-backdrop-filter: blur(18px) saturate(1.1);
+    border: 1px solid var(--color-ink-line);
+    border-radius: 999px;
+    box-shadow: var(--shadow-sm);
+    pointer-events: auto;
+  }
+  .nav-links { display: flex; gap: 24px; }
+  .nav-links a {
+    font-size: 14px; color: var(--color-ink-2);
+    position: relative; padding: 4px 0;
+    transition: color 0.15s;
+  }
+  .nav-links a:hover { color: var(--color-ink); }
+  .nav-links a::after {
+    content: ''; position: absolute; left: 0; right: 0; bottom: 0;
+    height: 1px; background: var(--color-ink);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.2s ease;
+  }
+  .nav-links a:hover::after { transform: scaleX(1); }
+  .nav-cta {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 9px 16px;
+    background: var(--color-ink); color: var(--color-paper);
+    border-radius: 999px;
+    font-size: 13px; font-weight: 500;
+    transition: transform 0.15s, background 0.15s;
+  }
+  .nav-cta:hover { background: var(--color-ink-2); transform: translateY(-1px); }
+  .nav-cta svg { width: 12px; height: 12px; }
+  @media (max-width: 880px) { .nav-links { display: none; } }
+</style>

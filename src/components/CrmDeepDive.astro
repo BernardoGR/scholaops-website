@@ -1,0 +1,137 @@
+---
+---
+<section class="dark-section" id="crm" style="background: var(--color-ink-2);">
+  <div class="wrap">
+    <div class="showcase-grid">
+      <div class="showcase-text reveal">
+        <span class="section-eyebrow on-dark">/ El CRM</span>
+        <h2>
+          Deja de perseguir.<br/>
+          <span class="italic">Empieza a cerrar.</span>
+        </h2>
+        <p>
+          El pipeline se ordena solo. Cada conversación y visita a la página alimenta un score — para que el lunes tu equipo trabaje la lista caliente, no el inbox.
+        </p>
+        <ul class="showcase-list">
+          <li><span class="check">✓</span>Kanban drag-and-drop en 7 etapas de admisiones</li>
+          <li><span class="check">✓</span>Lead scoring automático por cada interacción</li>
+          <li><span class="check">✓</span>WhatsApp y web en un clic — todo registrado automáticamente</li>
+          <li><span class="check">✓</span>Reportes de embudo que tu directora sí va a abrir</li>
+        </ul>
+      </div>
+
+      <div class="reveal d1">
+        <div class="device">
+          <div class="device-screen">
+            <div class="crm-mock">
+              <div class="crm-topbar">
+                <div>
+                  <div class="crumb">Admisiones / Otoño 2026</div>
+                  <div class="title">Pipeline</div>
+                </div>
+                <div class="av"><span class="ring">JR</span>Julia · Lead de Admisiones</div>
+              </div>
+              <div class="crm-stats">
+                <div class="crm-stat">
+                  <div class="lbl">Leads activos</div>
+                  <div class="val" data-count="428">428</div>
+                  <div class="delta">▲ 12% esta sem.</div>
+                </div>
+                <div class="crm-stat">
+                  <div class="lbl">Leads calientes</div>
+                  <div class="val" data-count="34">34</div>
+                  <div class="delta">▲ 6 hoy</div>
+                </div>
+                <div class="crm-stat">
+                  <div class="lbl">Resp. promedio</div>
+                  <div class="val">2.4<span class="small">s</span></div>
+                  <div class="delta">vs 4.2h antes</div>
+                </div>
+                <div class="crm-stat">
+                  <div class="lbl">Conversión</div>
+                  <div class="val">28<span class="small">%</span></div>
+                  <div class="delta">▲ 9pts AoA</div>
+                </div>
+              </div>
+              <div class="crm-kanban">
+                <div class="crm-col">
+                  <h5>Nuevo <span class="count">42</span></h5>
+                  <div class="lead-card cold"><div class="nm">Luca Chen</div><div class="meta">ES-118 · hace 2m</div><div class="score-pill"><i></i>18 Frío</div></div>
+                  <div class="lead-card cold"><div class="nm">R. Ortiz</div><div class="meta">ES-117 · hace 14m</div><div class="score-pill"><i></i>22 Frío</div></div>
+                </div>
+                <div class="crm-col">
+                  <h5>Calificando <span class="count">28</span></h5>
+                  <div class="lead-card warm"><div class="nm">Aisha Brown</div><div class="meta">ES-101 · Grado 9</div><div class="score-pill warm"><i></i>48 Tibio</div></div>
+                  <div class="lead-card warm"><div class="nm">Joon Kang</div><div class="meta">ES-095 · Prog. IB</div><div class="score-pill warm"><i></i>53 Tibio</div></div>
+                </div>
+                <div class="crm-col">
+                  <h5>Tibio <span class="count">19</span></h5>
+                  <div class="lead-card warm moving"><div class="nm">Noor Singh</div><div class="meta">Visita: 14 ago</div><div class="score-pill warm"><i></i>64 Tibio</div></div>
+                  <div class="lead-card warm"><div class="nm">Pablo Diaz</div><div class="meta">2 hermanos · K3</div><div class="score-pill warm"><i></i>68 Tibio</div></div>
+                </div>
+                <div class="crm-col">
+                  <h5>Caliente <span class="count">9</span></h5>
+                  <div class="lead-card hot"><div class="nm">Maya Patel</div><div class="meta">Visitó · esp. oferta</div><div class="score-pill hot"><i></i>87 Cal.</div></div>
+                  <div class="lead-card hot"><div class="nm">Sofía Reyes</div><div class="meta">Sol. enviada</div><div class="score-pill hot"><i></i>92 Cal.</div></div>
+                </div>
+                <div class="crm-col">
+                  <h5>Cerrando <span class="count">5</span></h5>
+                  <div class="lead-card hot"><div class="nm">Tomás Vega</div><div class="meta">Oferta enviada</div><div class="score-pill hot"><i></i>95 Cal.</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .device {
+    background: var(--color-ink); border-radius: 16px; padding: 12px;
+    box-shadow: 0 32px 64px rgba(14,13,10,0.4);
+  }
+  .device-screen {
+    background: #1C1A16; border-radius: 10px; overflow: hidden;
+  }
+  .crm-mock { font-family: var(--font-sans); }
+
+  .crm-topbar {
+    padding: 12px 16px; background: rgba(255,255,255,0.04);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .crumb { font-family: var(--font-mono); font-size: 9px; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.1em; }
+  .title { font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.9); margin-top: 2px; }
+  .av { display: flex; align-items: center; gap: 8px; font-size: 11px; color: rgba(255,255,255,0.5); }
+  .ring { width: 24px; height: 24px; border-radius: 50%; background: var(--color-lime); display: inline-flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 700; color: var(--color-ink); }
+
+  .crm-stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: rgba(255,255,255,0.04); border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .crm-stat { padding: 10px 12px; }
+  .crm-stat .lbl { font-family: var(--font-mono); font-size: 8px; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.35); margin-bottom: 4px; }
+  .crm-stat .val { font-size: 18px; font-weight: 700; color: rgba(255,255,255,0.9); letter-spacing: -0.03em; line-height: 1; }
+  .crm-stat .val .small { font-size: 11px; font-weight: 500; }
+  .crm-stat .delta { font-family: var(--font-mono); font-size: 8px; color: var(--color-lime-dk); margin-top: 3px; }
+
+  .crm-kanban { display: flex; gap: 8px; padding: 12px; overflow-x: auto; }
+  .crm-col { flex: 0 0 130px; display: flex; flex-direction: column; gap: 6px; }
+  .crm-col h5 { font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.5); display: flex; align-items: center; justify-content: space-between; padding: 0 2px; }
+  .count { background: rgba(255,255,255,0.08); padding: 1px 5px; border-radius: 4px; font-size: 9px; }
+
+  .lead-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 8px 10px; }
+  .lead-card.hot { border-color: rgba(183,214,64,0.3); background: rgba(215,242,107,0.07); }
+  .lead-card.moving { animation: card-move 6s ease-in-out infinite; }
+  .nm { font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.85); }
+  .meta { font-family: var(--font-mono); font-size: 9px; color: rgba(255,255,255,0.35); margin: 2px 0 6px; }
+  .score-pill {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-family: var(--font-mono); font-size: 9px; font-weight: 600;
+    color: rgba(255,255,255,0.45);
+  }
+  .score-pill i { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.2); display: block; }
+  .score-pill.warm i { background: var(--color-sky); }
+  .score-pill.hot  i { background: var(--color-lime-dk); }
+  .score-pill.warm { color: var(--color-sky); }
+  .score-pill.hot  { color: var(--color-lime-dk); }
+</style>

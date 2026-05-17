@@ -1,0 +1,93 @@
+---
+---
+<section class="products-section">
+  <div class="wrap">
+    <div class="products-head">
+      <div class="reveal">
+        <span class="section-eyebrow">Dos productos. Una plataforma.</span>
+        <h2 class="section-title">
+          Conversaciones que <span class="italic">convierten</span>.<br/>
+          Un CRM que <span class="italic">cierra</span>.
+        </h2>
+      </div>
+      <p class="section-sub reveal d1">
+        La mayoría del «software de admisiones» es una hoja de cálculo glorificada. scholaops son dos productos en uno: un agente que atiende solicitudes a las 3 a.m. y un CRM que le pasa a tu equipo exactamente la siguiente jugada.
+      </p>
+    </div>
+
+    <div class="products-grid">
+      <!-- Widget -->
+      <div class="product-card reveal d1">
+        <span class="pc-tag">● AI Widget</span>
+        <h3>Un agente que <span class="italic">nunca duerme</span>.</h3>
+        <p>Instalación única. Ada califica prospectos, agenda visitas al campus, responde dudas de colegiatura y llena tu CRM en segundo plano.</p>
+        <div class="pc-visual pc-widget-visual">
+          <div class="b in">¡Hola! Cuéntame en qué grado va tu hija y cuándo le gustaría empezar 🌱</div>
+          <div class="b out">Entra a 1.º de secundaria, idealmente en agosto.</div>
+          <div class="b ai">Perfecto. Quedan pocos lugares en 1.º este ciclo — puedo apartarte uno en el próximo open house, el 14 de agosto. ¿Lo agendo?</div>
+        </div>
+      </div>
+
+      <!-- CRM -->
+      <div class="product-card reveal d2">
+        <span class="pc-tag">◆ CRM</span>
+        <h3>Un pipeline que <span class="italic">ya lo sabe</span>.</h3>
+        <p>Cada chat crea un lead, cada señal actualiza un score. Tu equipo abre el CRM por la mañana y ve exactamente a quién llamar — priorizado y con contexto.</p>
+        <div class="pc-visual pc-crm-visual">
+          <div class="pc-crm-col"><div class="col-label">Nuevo · 4</div><div class="lcard cold"><div class="nm">L. Chen</div><div class="sc"><i></i>18</div></div><div class="lcard cold"><div class="nm">R. Ortiz</div><div class="sc"><i></i>22</div></div></div>
+          <div class="pc-crm-col"><div class="col-label">Eval. · 7</div><div class="lcard warm"><div class="nm">A. Brown</div><div class="sc"><i></i>48</div></div><div class="lcard warm"><div class="nm">J. Kang</div><div class="sc"><i></i>53</div></div></div>
+          <div class="pc-crm-col"><div class="col-label">Tibio · 9</div><div class="lcard warm"><div class="nm">N. Singh</div><div class="sc"><i></i>64</div></div><div class="lcard warm"><div class="nm">P. Diaz</div><div class="sc"><i></i>68</div></div></div>
+          <div class="pc-crm-col"><div class="col-label">Cal. · 3</div><div class="lcard hot"><div class="nm">M. Patel</div><div class="sc"><i></i>87</div></div><div class="lcard hot"><div class="nm">S. Reyes</div><div class="sc"><i></i>92</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .products-head { margin-bottom: 56px; }
+  .products-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  @media (max-width: 800px) { .products-grid { grid-template-columns: 1fr; } }
+
+  .product-card {
+    background: var(--color-paper);
+    border: 1px solid var(--color-ink-line);
+    border-radius: 20px; padding: 32px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .product-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+  .pc-tag {
+    font-family: var(--font-mono); font-size: 11px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--color-ink-mute); display: block; margin-bottom: 14px;
+  }
+  .product-card h3 {
+    font-family: var(--font-sans); font-weight: 500;
+    font-size: clamp(22px,3vw,30px); letter-spacing: -0.025em; line-height: 1.1;
+    margin-bottom: 12px;
+  }
+  .product-card h3 .italic { font-family: var(--font-serif); font-style: italic; font-weight: 400; }
+  .product-card > p { font-size: 15px; color: var(--color-ink-mute); margin-bottom: 24px; line-height: 1.6; }
+
+  .pc-visual {
+    background: var(--color-cream); border: 1px solid var(--color-ink-line);
+    border-radius: 14px; padding: 16px;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .pc-widget-visual .b {
+    max-width: 85%; padding: 8px 12px; border-radius: 12px; font-size: 12px; line-height: 1.4;
+  }
+  .pc-widget-visual .b.in  { background: #fff; border: 1px solid rgba(14,13,10,0.06); align-self: flex-start; border-bottom-left-radius: 3px; }
+  .pc-widget-visual .b.out { background: var(--color-ink); color: var(--color-paper); align-self: flex-end; border-bottom-right-radius: 3px; }
+  .pc-widget-visual .b.ai  { background: linear-gradient(180deg,#F8FBE6,#ECF2C8); border: 1px solid rgba(183,214,64,0.4); align-self: flex-start; font-size: 11.5px; border-bottom-left-radius: 3px; }
+
+  .pc-crm-visual { flex-direction: row; gap: 6px; padding: 12px; overflow: hidden; }
+  .pc-crm-col { flex: 1; display: flex; flex-direction: column; gap: 4px; }
+  .col-label { font-family: var(--font-mono); font-size: 8px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-ink-mute); margin-bottom: 4px; white-space: nowrap; }
+  .lcard { background: var(--color-paper); border: 1px solid var(--color-ink-line); border-radius: 6px; padding: 6px 8px; }
+  .lcard.hot { border-color: rgba(183,214,64,0.5); background: rgba(215,242,107,0.12); }
+  .nm { font-size: 10px; font-weight: 600; }
+  .sc { display: flex; align-items: center; gap: 3px; font-family: var(--font-mono); font-size: 9px; color: var(--color-ink-mute); margin-top: 2px; }
+  .sc i { width: 5px; height: 5px; border-radius: 50%; background: var(--color-ink-line); display: block; }
+  .lcard.hot .sc i { background: var(--color-lime-dk); }
+</style>

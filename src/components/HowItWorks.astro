@@ -1,0 +1,67 @@
+---
+---
+<section class="how-section" id="how">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="section-eyebrow">Cómo funciona</span>
+      <h2 class="section-title">
+        En vivo en tu escuela <span class="italic">mañana mismo</span>.
+      </h2>
+    </div>
+
+    <div class="steps">
+      <div class="step reveal d1">
+        <div class="ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
+        <h4>Conecta el <span class="italic">copilot</span></h4>
+        <p>scholaops se integra al sitio de tu escuela con una línea de código. Tu equipo recibe el inbox; las familias reciben respuestas inmediatas en su idioma.</p>
+      </div>
+
+      <div class="step reveal d2">
+        <div class="ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <h4>Aliméntalo con tu <span class="italic">verdad</span></h4>
+        <p>Sube tu reglamento, tabla de colegiaturas, calendario y FAQ. Ada se ancla en los programas reales de tu escuela — nunca genérica, nunca alucinada.</p>
+      </div>
+
+      <div class="step reveal d3">
+        <div class="ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h4>Abre el CRM, <span class="italic">trabaja la lista caliente</span></h4>
+        <p>Cada prospecto llega priorizado, calificado y enriquecido. Tu equipo deja de triagiar correos y empieza a cerrar — desde el primer contacto hasta la inscripción.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .how-section { background: var(--color-paper); }
+  .steps {
+    display: grid; grid-template-columns: repeat(3,1fr); gap: 24px;
+    margin-top: 56px;
+  }
+  @media (max-width: 780px) { .steps { grid-template-columns: 1fr; } }
+
+  .step {
+    background: var(--color-cream); border: 1px solid var(--color-ink-line);
+    border-radius: 20px; padding: 28px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .step:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+
+  .ico {
+    width: 44px; height: 44px; border-radius: 12px;
+    background: var(--color-ink); color: var(--color-lime);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 20px;
+  }
+  .step h4 {
+    font-family: var(--font-sans); font-weight: 500;
+    font-size: 20px; letter-spacing: -0.025em; line-height: 1.2; margin-bottom: 12px;
+  }
+  .step h4 .italic { font-family: var(--font-serif); font-style: italic; font-weight: 400; }
+  .step p { font-size: 14px; color: var(--color-ink-mute); line-height: 1.6; }
+</style>
