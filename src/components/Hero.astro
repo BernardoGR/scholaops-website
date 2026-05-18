@@ -165,11 +165,7 @@
     margin-left: auto;
   }
   @media (max-width: 980px) {
-    .hero-stage { margin: 0 auto; height: 480px; max-width: 400px; overflow: hidden; }
-    .phone      { max-width: 260px; }
-  }
-  @media (max-width: 768px) {
-    .hero-stage     { display: none; }
+    .hero-stage { display: none; }
   }
   .hero-stage::before {
     content: '';
@@ -279,14 +275,7 @@
   .float-wa    { top: 38%; right: -6%; width: 190px; animation-delay: -2s; }
   .float-pipeline { bottom: 4%; left: -4%; width: 220px; animation-delay: -3s; }
   @media (max-width: 980px) {
-    .float-score    { right: 2%; }
-    .float-wa       { right: 0; }
-    .float-pipeline { left: 2%; }
-  }
-  @media (max-width: 768px) {
-    .float-score    { display: none; }
-    .float-wa       { display: none; }
-    .float-pipeline { display: none; }
+    /* float cards hidden — entire hero-stage is hidden at this breakpoint */
   }
   .fc-label { font-family: var(--font-mono); font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-ink-mute); margin-bottom: 8px; }
   .fc-name  { font-size: 13px; font-weight: 600; }
