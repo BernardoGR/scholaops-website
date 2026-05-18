@@ -104,7 +104,7 @@
 </section>
 
 <style>
-  .hero { padding: 56px 0 96px; position: relative; }
+  .hero { padding: 56px 0 96px; position: relative; overflow: hidden; }
   .hero-grid {
     display: grid;
     grid-template-columns: 1.05fr 0.95fr;
@@ -276,6 +276,14 @@
     .float-score { right: 2%; }
     .float-wa    { right: 0; }
     .float-pipeline { left: 2%; }
+  }
+  @media (max-width: 600px) {
+    .float-score    { top: 3%; right: 1%; width: 160px; padding: 10px; }
+    .float-wa       { display: none; }
+    .float-pipeline { display: none; }
+    .fc-label  { font-size: 9px; }
+    .fc-name   { font-size: 12px; }
+    .gauge-num { font-size: 18px; }
   }
   .fc-label { font-family: var(--font-mono); font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-ink-mute); margin-bottom: 8px; }
   .fc-name  { font-size: 13px; font-weight: 600; }
