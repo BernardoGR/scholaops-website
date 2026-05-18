@@ -5,35 +5,48 @@
     <div class="pilot-label">Piloteando con</div>
     <div class="pilot-row">
       <span class="pilot-name">Via Diseño</span>
-      <span class="pilot-divider"></span>
-      <span class="pilot-meta">En vivo · cohorte Otoño 2026</span>
+      <span class="pilot-sep"></span>
+      <span class="pilot-meta">
+        <span class="live-dot"></span>EN VIVO · COHORTE OTOÑO 2026
+      </span>
     </div>
   </div>
 </section>
 
 <style>
   .pilot-section {
-    padding: 32px 0 64px;
+    padding: 48px 0 72px;
     border-top: 1px solid var(--color-ink-line);
+    text-align: center;
   }
   .pilot-label {
     font-family: var(--font-mono); font-size: 11px;
     text-transform: uppercase; letter-spacing: 0.16em;
-    color: var(--color-ink-mute); margin-bottom: 16px;
+    color: var(--color-ink-mute); margin-bottom: 20px;
   }
   .pilot-row {
-    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+    display: inline-flex; align-items: center; gap: 20px; flex-wrap: wrap;
+    justify-content: center;
   }
   .pilot-name {
     font-family: var(--font-serif); font-style: italic;
-    font-size: 28px; color: var(--color-ink);
+    font-size: clamp(42px, 6vw, 72px);
+    color: var(--color-ink); line-height: 1;
   }
-  .pilot-divider {
-    width: 4px; height: 4px; border-radius: 50%;
+  .pilot-sep {
+    width: 1px; height: 36px;
     background: var(--color-ink-line);
   }
   .pilot-meta {
-    font-family: var(--font-mono); font-size: 12px;
-    color: var(--color-ink-mute); text-transform: uppercase; letter-spacing: 0.1em;
+    display: flex; align-items: center; gap: 8px;
+    font-family: var(--font-mono); font-size: 12px; font-weight: 600;
+    color: var(--color-ink-mute); text-transform: uppercase; letter-spacing: 0.12em;
+  }
+  .live-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--color-lime-dk);
+    box-shadow: 0 0 0 0 rgba(183,214,64,0.6);
+    animation: live-pulse 2s infinite;
+    flex-shrink: 0;
   }
 </style>

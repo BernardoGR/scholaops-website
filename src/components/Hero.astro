@@ -158,9 +158,13 @@
 
   /* Stage */
   .hero-stage {
-    position: relative; aspect-ratio: 1/1; max-width: 540px; margin-left: auto;
+    position: relative;
+    width: 100%; max-width: 540px;
+    height: 560px;
+    margin-left: auto;
   }
-  @media (max-width: 980px) { .hero-stage { margin: 0 auto; aspect-ratio: 4/5; max-width: 460px; } }
+  @media (max-width: 980px) { .hero-stage { margin: 0 auto; height: 480px; max-width: 460px; } }
+  @media (max-width: 600px)  { .hero-stage { height: 420px; } }
   .hero-stage::before {
     content: '';
     position: absolute; inset: 6% -2% 4% 4%;

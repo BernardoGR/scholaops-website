@@ -21,16 +21,17 @@
       </div>
 
       <div class="widget-showcase reveal d1" aria-hidden="true">
-        <div class="widget-callout tag-extract">
-          <div class="ce-lbl">Extraído del chat automáticamente</div>
-          <div class="ce-chips">
-            <span>1.º secundaria</span>
-            <span>Ago 2026</span>
-            <span class="cold">Preguntó colegiatura</span>
-            <span class="warm-chip">Pidió visita</span>
-            <span class="warm-chip">2 hermanos</span>
+        <div class="widget-stack">
+          <div class="widget-callout tag-extract">
+            <div class="ce-lbl">Extraído del chat automáticamente</div>
+            <div class="ce-chips">
+              <span>1.º secundaria</span>
+              <span>Ago 2026</span>
+              <span class="cold">Preguntó colegiatura</span>
+              <span class="warm-chip">Pidió visita</span>
+              <span class="warm-chip">2 hermanos</span>
+            </div>
           </div>
-        </div>
 
         <div class="widget-frame">
           <div class="wf-head">
@@ -46,6 +47,7 @@
             <div class="send">↑</div>
           </div>
         </div>
+        </div><!-- /widget-stack -->
       </div>
     </div>
   </div>
@@ -53,13 +55,18 @@
 
 <style>
   .widget-showcase {
-    position: relative; display: flex; flex-direction: column;
-    gap: 16px; align-items: flex-end;
+    position: relative;
+  }
+  .widget-stack {
+    position: relative;
+    padding-top: 48px; /* space for overlapping callout */
   }
   .widget-callout {
+    position: absolute; top: 0; left: 0; z-index: 4;
     background: var(--color-paper); border: 1px solid rgba(215,242,107,0.3);
     border-radius: 14px; padding: 14px 16px;
-    width: 100%; max-width: 380px;
+    width: 280px;
+    box-shadow: var(--shadow-md);
     animation: bob 5s ease-in-out infinite alternate;
   }
   .widget-callout.tag-extract { animation-delay: -1.5s; }
