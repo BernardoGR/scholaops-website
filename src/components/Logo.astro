@@ -1,0 +1,48 @@
+---
+interface Props {
+  variant?: 'light' | 'dark';
+}
+const { variant = 'light' } = Astro.props;
+const isDark = variant === 'dark';
+---
+<a href="#" class="logo-link">
+  <svg
+    width="140"
+    height="22"
+    viewBox="0 0 140 22"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-label="scholaops.ai"
+    role="img"
+    overflow="visible"
+  >
+    <!-- mark: ink rounded square + lime diamond + center dot -->
+    <rect width="22" height="22" rx="7" fill={isDark ? 'rgba(255,255,255,0.1)' : '#0E0D0A'} />
+    <rect
+      x="4" y="4" width="14" height="14" rx="2.5"
+      fill="#D7F26B"
+      transform="rotate(45, 11, 11) translate(11, 11) scale(0.9) translate(-11, -11)"
+    />
+    <circle cx="11" cy="11" r="2.5" fill={isDark ? '#1A1814' : '#0E0D0A'} />
+    <!-- wordmark -->
+    <text
+      x="30"
+      y="11"
+      dominant-baseline="central"
+      font-family="'Space Grotesk', system-ui, sans-serif"
+      font-size="16"
+      font-weight="600"
+      letter-spacing="-0.16"
+    ><tspan fill={isDark ? 'rgba(242,239,230,0.8)' : '#0E0D0A'}>scholaops</tspan><tspan fill={isDark ? 'rgba(242,239,230,0.5)' : '#6B6660'}>.ai</tspan></text>
+  </svg>
+</a>
+
+<style>
+  .logo-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    transition: opacity 0.15s;
+  }
+  .logo-link:hover { opacity: 0.75; }
+</style>

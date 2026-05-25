@@ -1,13 +1,11 @@
 ---
+import Logo from './Logo.astro';
 ---
 <footer>
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="#" class="logo">
-          <span class="logo-mark"></span>
-          <b>scholaops</b><span class="dot">.ai</span>
-        </a>
+        <Logo variant="dark" />
         <p>El OS de admisiones para escuelas modernas. Agente AI + CRM, trabajando como uno solo.</p>
       </div>
       <div class="footer-col">
@@ -61,9 +59,7 @@
   }
   @media (max-width: 480px) { .footer-grid { grid-template-columns: 1fr; } }
 
-  .footer-brand .logo { margin-bottom: 14px; display: inline-flex; }
-  .footer-brand .logo-mark { background: rgba(255,255,255,0.1); }
-  .footer-brand .logo b, .footer-brand .logo .dot { color: rgba(242,239,230,0.8); }
+  .footer-brand :global(.logo-link) { margin-bottom: 14px; }
   .footer-brand p { font-size: 13px; color: rgba(242,239,230,0.45); line-height: 1.6; max-width: 260px; }
 
   .footer-col h6 {
